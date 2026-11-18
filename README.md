@@ -1,7 +1,7 @@
-# Doutor Face — Transplante Capilar
+# Doutor Face · Transplante Capilar
 
 Landing page de conversão para transplante capilar FUE em Cascavel/PR.
-Tráfego pago (Meta Ads) → WhatsApp.
+O tráfego vem do Meta Ads e a conversão acontece no WhatsApp.
 
 ## Stack
 
@@ -31,8 +31,8 @@ python3 -m http.server 8777
 
 ## Publicar
 
-Site estático — qualquer host serve. No Vercel ou Netlify, conecte o
-repositório e publique sem configuração extra (a raiz já é o site).
+Site estático, então qualquer host serve. No Vercel ou Netlify, conecte o
+repositório e publique sem configuração extra, já que a raiz é o próprio site.
 
 ## Pendências
 
@@ -42,4 +42,4 @@ repositório e publique sem configuração extra (a raiz já é o site).
 
 ## Responsável técnica
 
-Dra. Letícia Menezes de Almeida Cardoso — CRM-PR 62027
+Dra. Letícia Menezes de Almeida Cardoso, CRM-PR 62027
