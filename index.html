@@ -209,7 +209,11 @@ h2{font-size:clamp(27px,4vw,43px)}
   border:1px solid var(--line);margin-bottom:20px;overflow:hidden;
   display:grid;place-items:center;
 }
-.doc-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.doc-photo img,.doc-photo::after{grid-area:1/1}
+.doc-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%;
+  opacity:0;transition:opacity .3s ease}
+.doc-photo.has-img img{opacity:1}
+.doc-photo::after{place-self:center}
 .doc-photo::after{
   content:"Foto da médica";font-family:var(--mono);font-size:11px;
   letter-spacing:.12em;text-transform:uppercase;color:var(--mute-2);
@@ -529,18 +533,19 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
   // Foto da médica, só entra se o arquivo existir de fato
   if(C.medicoFoto){
     var box = document.getElementById('doc-photo');
-    var im = new Image();
+    var im = document.createElement('img');
     im.alt = C.medico + ', ' + C.crm;
-    im.loading = 'lazy';
-    im.onload = function(){
-      box.appendChild(im);
-      box.classList.add('has-img');
-    };
-    im.onerror = function(){
-      if(C.medicoFotoFallback && im.src.indexOf(C.medicoFotoFallback) < 0){
-        im.src = C.medicoFotoFallback;   // navegador sem suporte a WebP
+    im.addEventListener('load', function(){ box.classList.add('has-img'); });
+    im.addEventListener('error', function(){
+      // navegador sem suporte a WebP: tenta o JPG
+      if(C.medicoFotoFallback && im.getAttribute('src') !== C.medicoFotoFallback){
+        im.src = C.medicoFotoFallback;
+      } else {
+        box.removeChild(im);
+        box.classList.remove('has-img');
       }
-    };
+    });
+    box.appendChild(im);
     im.src = C.medicoFoto;
   }
   set('f-end', C.endereco);
