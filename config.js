@@ -30,7 +30,8 @@ window.CONFIG = {
 
   // Foto da médica: salve o arquivo em assets/ e ajuste o nome abaixo.
   // Deixe "" para a seção funcionar sem foto.
-  medicoFoto: "assets/dra-leticia.jpg",
+  medicoFoto: "assets/dra-leticia.webp",
+  medicoFotoFallback: "assets/dra-leticia.jpg",
 
   // ===== CORPO CLÍNICO (não usado nesta página) =====
   // Dr. Matheus França de Oliveira, responsável pela parte cirúrgica.

@@ -520,10 +520,16 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
   if(C.medicoFoto){
     var box = document.getElementById('doc-photo');
     var im = new Image();
+    im.alt = C.medico + ', ' + C.crm;
+    im.loading = 'lazy';
     im.onload = function(){
-      im.alt = C.medico + ', ' + C.crm;
       box.appendChild(im);
       box.classList.add('has-img');
+    };
+    im.onerror = function(){
+      if(C.medicoFotoFallback && im.src.indexOf(C.medicoFotoFallback) < 0){
+        im.src = C.medicoFotoFallback;   // navegador sem suporte a WebP
+      }
     };
     im.src = C.medicoFoto;
   }
