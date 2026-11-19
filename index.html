@@ -142,7 +142,9 @@ header{
   .hero-case{order:1}                   /* imagem primeiro */
 }
 
-h1{font-size:clamp(33px,5vw,55px);max-width:14ch}
+h1{font-size:clamp(30px,4.2vw,48px);max-width:none}
+.h1-line{display:block;white-space:nowrap}
+@media(max-width:560px){.h1-line{white-space:normal}}
 @media(max-width:900px){h1{max-width:none}}
 h1 em{font-style:normal;color:var(--paper);display:block;opacity:.72}
 .hero-sub{font-size:clamp(16px,2vw,18.5px);color:var(--mute);margin-top:22px;max-width:50ch}
@@ -304,12 +306,11 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Transplante capilar FUE · Cascavel/PR</div>
-      <h1>Não é peruca, não é fibra.<em>É o seu cabelo de volta.</em></h1>
+      <h1><span class="h1-line">Recupere seus cabelos.</span><em class="h1-line">Resgate sua confiança.</em></h1>
       <p class="hero-sub">
-        Você já reparou na foto antes de postar. Já escolheu boné em dia de sol.
-        O transplante tira folículos da nuca, onde o cabelo nunca cai, e devolve eles
-        para as falhas. Cresce, você corta, e ele continua lá. Não é só cabelo que
-        volta: é você parar de pensar nisso.
+        O transplante capilar é uma solução para quem deseja recuperar os fios em regiões
+        afetadas pela calvície. Com técnicas modernas e planejamento individualizado,
+        buscamos resultados naturais, respeitando as características de cada paciente.
       </p>
       <div class="hero-cta">
         <a class="btn btn-main" data-wa="hero">
