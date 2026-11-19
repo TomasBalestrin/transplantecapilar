@@ -155,6 +155,11 @@ h1 em{font-style:normal;color:var(--paper);display:block;opacity:.72}
   border:1px solid var(--line);background:var(--ink-2);aspect-ratio:1/1;
 }
 .hero-case img{width:100%;height:100%;object-fit:contain}
+.hero-case-cap{
+  position:absolute;left:0;right:0;bottom:0;padding:10px 14px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--mute);
+  background:linear-gradient(transparent,rgba(14,16,18,.92) 42%);text-align:center;
+}
 
 /* ═══════════ SEÇÕES ═══════════ */
 section{padding:clamp(46px,6vw,76px) 0;position:relative}
@@ -188,6 +193,7 @@ h2{font-size:clamp(27px,4vw,43px)}
 .case-split{position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(242,240,237,.28)}
 .case-lab{position:absolute;bottom:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
   text-transform:uppercase;background:rgba(14,16,18,.8);padding:5px 9px;border-radius:3px;color:var(--paper)}
+.hero-case .case-lab{bottom:38px}
 .case-lab.l{left:10px}
 .case-lab.r{right:10px;color:var(--amber-hi)}
 .case-meta{padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;
@@ -318,6 +324,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
            alt="Paciente antes e depois do transplante capilar: entradas e topo preenchidos">
       <span class="case-lab l">Antes</span>
       <span class="case-lab r">Depois</span>
+      <figcaption class="hero-case-cap">Paciente da clínica, 4 meses após o procedimento</figcaption>
     </figure>
   </div>
 </section>
@@ -580,11 +587,11 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
   });
 
   /* ───── Galeria de casos ───── */
-  // ATENÇÃO: só o caso-03 tem tempo confirmado pela clínica (8 meses).
-  // Os demais são estimativas e precisam ser conferidos com a Carol antes de publicar.
+  // Tempos confirmados pela clínica: caso-03 (8 meses) e caso-01 (4 meses).
+  // Os demais ainda são estimativa e precisam ser conferidos com a Carol.
   var casos = [
     {img:'assets/resultados/caso-03.jpg', area:'Topo e linha frontal', tempo:'8 meses'},
-    {img:'assets/resultados/caso-01.jpg', area:'Entradas e topo',      tempo:'12 meses'},
+    {img:'assets/resultados/caso-01.jpg', area:'Entradas e topo',      tempo:'4 meses'},
     {img:'assets/resultados/caso-06.jpg', area:'Densidade no topo',    tempo:'12 meses'},
     {img:'assets/resultados/caso-04.jpg', area:'Coroa',                tempo:'12 meses'},
     {img:'assets/resultados/caso-05.jpg', area:'Entradas',             tempo:'12 meses'},
