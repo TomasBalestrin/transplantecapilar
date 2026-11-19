@@ -327,10 +327,10 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Resultados de quem já fez</div>
-      <h2>Homens como você, um ano depois.</h2>
+      <h2>Homens como você, depois do procedimento.</h2>
       <p>Sem filtro, sem ângulo favorável, sem maquiagem de resultado. Mesma luz e mesma
-         posição nas duas fotos: a primeira no dia da avaliação, a segunda depois que o
-         cabelo terminou de nascer.</p>
+         posição nas duas fotos: a primeira no dia da avaliação, a segunda no tempo indicado
+         em cada caso.</p>
     </div>
 
     <div class="gallery" id="gallery"></div>
@@ -363,9 +363,10 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
         <div class="step-n">01</div>
         <div>
           <h3>Avaliação e desenho</h3>
-          <p>A médica examina sua nuca para ver quantos folículos dá para usar e desenha a
-             nova linha no seu rosto, na frente do espelho. Você sai sabendo quantos folículos
-             o seu caso pede, quanto custa e em quanto tempo fica pronto.</p>
+          <p>A médica olha o grau da sua perda, a espessura dos seus fios e quanto a sua nuca
+             tem para doar. Com isso ela desenha a nova linha no seu rosto, respeitando o
+             formato dele e a direção em que o seu cabelo cresce. Você sai sabendo quantos
+             folículos o seu caso pede, quanto custa e em quanto tempo fica pronto.</p>
         </div>
       </div>
       <div class="step">
@@ -374,16 +375,17 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
           <h3>Procedimento em um dia</h3>
           <p>Anestesia local, sem corte e sem ponto. Você passa o dia acordado, conversando
              e mexendo no celular, e dorme na sua casa. Sem viagem, sem hotel, sem passagem:
-             é aqui em Cascavel, e no dia seguinte já dá para trabalhar.</p>
+             é aqui em Cascavel. Você sai com as orientações do pós escritas, e a equipe
+             acompanha cada etapa da recuperação.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-n">03</div>
         <div>
           <h3>Crescimento</h3>
-          <p>Por volta do terceiro mês você começa a ver os fios novos. No sexto já dá para
-             notar na foto. O resultado inteiro aparece entre 10 e 12 meses, e a clínica
-             acompanha você em todo esse caminho.</p>
+          <p>Entre o terceiro e o quarto mês você começa a ver os fios novos. Lá pelo sexto
+             já dá para notar na foto. O resultado inteiro leva de 12 a 18 meses, e a clínica
+             acompanha você nesse caminho todo.</p>
         </div>
       </div>
     </div>
@@ -450,7 +452,8 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
         <summary>Em quanto tempo eu vejo resultado?</summary>
         <div class="faq-a">Entre a segunda e a sexta semana os fios transplantados caem. Isso
           assusta quem não foi avisado, mas é parte do processo: o folículo ficou e vai produzir
-          de novo. O cabelo começa a nascer no terceiro mês e fica completo entre 10 e 12.</div>
+          de novo. O cabelo novo começa a nascer entre o terceiro e o quarto mês, e o resultado
+          final leva de 12 a 18 meses para aparecer por completo.</div>
       </details>
       <details>
         <summary>Daqui a uns anos vai cair de novo?</summary>
@@ -577,13 +580,15 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
   });
 
   /* ───── Galeria de casos ───── */
+  // ATENÇÃO: só o caso-03 tem tempo confirmado pela clínica (8 meses).
+  // Os demais são estimativas e precisam ser conferidos com a Carol antes de publicar.
   var casos = [
-    {img:'assets/resultados/caso-01.jpg', area:'Entradas e topo',    tempo:'12 meses'},
-    {img:'assets/resultados/caso-06.jpg', area:'Densidade no topo',  tempo:'12 meses'},
-    {img:'assets/resultados/caso-03.jpg', area:'Linha frontal',      tempo:'12 meses'},
-    {img:'assets/resultados/caso-04.jpg', area:'Coroa',              tempo:'10 meses'},
-    {img:'assets/resultados/caso-05.jpg', area:'Entradas',           tempo:'12 meses'},
-    {img:'assets/resultados/caso-02.jpg', area:'Coroa e topo',       tempo:'10 meses'}
+    {img:'assets/resultados/caso-03.jpg', area:'Topo e linha frontal', tempo:'8 meses'},
+    {img:'assets/resultados/caso-01.jpg', area:'Entradas e topo',      tempo:'12 meses'},
+    {img:'assets/resultados/caso-06.jpg', area:'Densidade no topo',    tempo:'12 meses'},
+    {img:'assets/resultados/caso-04.jpg', area:'Coroa',                tempo:'12 meses'},
+    {img:'assets/resultados/caso-05.jpg', area:'Entradas',             tempo:'12 meses'},
+    {img:'assets/resultados/caso-02.jpg', area:'Coroa e topo',         tempo:'12 meses'}
   ];
   var g = document.getElementById('gallery');
   if(g){
