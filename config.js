@@ -8,7 +8,7 @@ window.CONFIG = {
 
   // Mensagem que já vai preenchida quando a pessoa clica no botão.
   // {origem} é trocado automaticamente pelo ponto da página em que clicou.
-  mensagem: "Olá! Vim pelo site e quero fazer a avaliação capilar gratuita. Pode me explicar como funciona?",
+  mensagem: "Olá! Vim pelo site e quero fazer a avaliação capilar. Pode me explicar como funciona?",
 
   // ===== CLÍNICA =====
   clinica: "Doutor Face",
@@ -46,6 +46,7 @@ window.CONFIG = {
   //   Residência: Cirurgia Plástica e Microcirurgia no INCA, Rio de Janeiro
   //   Aperfeiçoamento: Cosmiatria e Procedimentos Estéticos na PROFECS/IDEP
 
-  // ===== PIXEL META (cole o ID quando tiver) =====
-  metaPixelId: "", // ex: "1234567890123456"
+  // ===== PIXEL META =====
+  // O pixel está instalado direto no <head> do index.html (ID 1762096844875265).
+  // O clique em qualquer botão de WhatsApp dispara o evento Lead.
 };

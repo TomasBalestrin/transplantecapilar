@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Transplante Capilar em Cascavel | Doutor Face</title>
-<meta name="description" content="Transplante capilar FUE em Cascavel/PR. Avaliação capilar gratuita com análise de densidade e plano de cobertura. Agende pelo WhatsApp.">
+<meta name="description" content="Transplante capilar FUE em Cascavel/PR. Avaliação capilar com análise de densidade e plano de cobertura. Agende pelo WhatsApp.">
 <meta property="og:title" content="Transplante Capilar em Cascavel | Doutor Face">
-<meta property="og:description" content="Seu próprio cabelo, de volta. Avaliação capilar gratuita em Cascavel/PR.">
+<meta property="og:description" content="Seu próprio cabelo, de volta. Avaliação capilar em Cascavel/PR.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/resultados/caso-01.jpg">
 <script type="application/ld+json">
@@ -14,7 +14,7 @@
   "@context":"https://schema.org",
   "@type":"MedicalClinic",
   "name":"Doutor Face",
-  "description":"Transplante capilar FUE em Cascavel, Paraná. Avaliação capilar gratuita.",
+  "description":"Transplante capilar FUE em Cascavel, Paraná. Avaliação capilar com análise de densidade.",
   "url":"https://doutorface.com.br",
   "telephone":"+5545999510548",
   "email":"clinica@doutorface.com.br",
@@ -37,10 +37,27 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Transplante capilar dói?","acceptedAnswer":{"@type":"Answer","text":"A anestesia local é o único momento de desconforto real. Durante o procedimento não há dor."}},
-{"@type":"Question","name":"Quanto custa um transplante capilar?","acceptedAnswer":{"@type":"Answer","text":"O valor depende do número de folículos necessários, definido na avaliação presencial gratuita."}},
+{"@type":"Question","name":"Quanto custa um transplante capilar?","acceptedAnswer":{"@type":"Answer","text":"O valor depende do número de folículos necessários, definido na avaliação presencial."}},
 {"@type":"Question","name":"Quanto tempo até ver o resultado?","acceptedAnswer":{"@type":"Answer","text":"O crescimento começa por volta do terceiro mês e o resultado completo ocorre entre 10 e 12 meses."}},
 {"@type":"Question","name":"O cabelo transplantado cai depois?","acceptedAnswer":{"@type":"Answer","text":"Não. Os folículos vêm da nuca, região geneticamente resistente à calvície, e mantêm essa característica."}}]}
 </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1762096844875265');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1762096844875265&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -520,10 +537,10 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
 <!-- ══════════ CTA FINAL ══════════ -->
 <section class="final">
   <div class="wrap">
-    <div class="eyebrow" style="justify-content:center">Avaliação gratuita em Cascavel</div>
+    <div class="eyebrow" style="justify-content:center">Avaliação capilar em Cascavel</div>
     <h2>Descubra se o seu caso tem solução.</h2>
-    <p>Meia hora de conversa com a médica, sem custo. Você sai sabendo se pode fazer, quantos
-       folículos precisa, quanto custa e em quanto tempo fica pronto. Decidir fica para depois.</p>
+    <p>Meia hora de conversa com a médica. Você sai sabendo se pode fazer, quantos folículos
+       precisa, quanto custa e em quanto tempo fica pronto. Decidir fica para depois.</p>
     <a class="btn btn-main" data-wa="final">Agendar avaliação</a>
     <p class="btn-note" id="final-note"></p>
   </div>
@@ -619,8 +636,13 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
     el.target = '_blank';
     el.rel = 'noopener';
     el.addEventListener('click', function(){
-      // Evento de conversão para o Meta Pixel
-      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:origem}); }
+      // Conversão: clique que leva o visitante ao WhatsApp
+      if(typeof fbq === 'function'){
+        fbq('track', 'Lead', {
+          content_name: 'Agendar avaliação',
+          content_category: origem      // hero, galeria, barra-fixa, etc.
+        });
+      }
     });
   });
 
@@ -653,17 +675,6 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:52px 0 1
         '<div class="case-meta"><span>' + c.area + '</span><b>' + c.tempo + '</b></div>';
       g.appendChild(el);
     });
-  }
-
-  /* ───── Meta Pixel ───── */
-  if(C.metaPixelId){
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', C.metaPixelId);
-    fbq('track', 'PageView');
   }
 })();
 </script>
